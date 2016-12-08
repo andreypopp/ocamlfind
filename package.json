@@ -19,6 +19,6 @@
         "ocaml": "https://github.com/andreypopp/ocaml.git#trunk"
     },
     "pjc": {
-        "build": "./configure -no-camlp4 -bindir $ocamlfind__bin -sitelib $ocamlfind__lib -mandir $ocamlfind__man -config $ocamlfind__lib/findlib.conf -no-custom && make all && make opt && make install"
+        "build": "./configure -no-camlp4 -bindir $ocamlfind__bin -sitelib $ocamlfind__lib -mandir $ocamlfind__man -config $ocamlfind__lib/findlib.conf -no-custom && make all && make opt && make install && make clean"
     }
 }
