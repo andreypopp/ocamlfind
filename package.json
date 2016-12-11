@@ -5,10 +5,6 @@
             "val": "true",
             "scope": "global"
         },
-        "PATH": {
-            "val": "$ocamlfind__install/bin:$PATH",
-            "scope": "global"
-        },
         "ocamlfind_enable": {
             "val": "enable",
             "scope": "global"
