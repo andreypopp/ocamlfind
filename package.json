@@ -8,6 +8,10 @@
         "ocamlfind_enable": {
             "val": "enable",
             "scope": "global"
+        },
+        "PATH": {
+            "val": "$ocamlfind__bin:$PATH",
+            "scope": "global"
         }
     },
     "name": "ocamlfind",
