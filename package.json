@@ -1,24 +1,30 @@
 {
     "version": "1.6.2",
-    "exportedEnvVars": {
-        "ocamlfind_installed": {
-            "val": "true",
-            "scope": "global"
-        },
-        "ocamlfind_enable": {
-            "val": "enable",
-            "scope": "global"
-        },
-        "PATH": {
-            "val": "$ocamlfind__bin:$PATH",
-            "scope": "global"
-        }
-    },
     "name": "ocamlfind",
     "dependencies": {
-        "ocaml": "https://github.com/andreypopp/ocaml.git#trunk"
+        "ocaml": "https://github.com/andreypopp/ocaml.git#esy"
     },
-    "pjc": {
-        "build": "./configure -no-camlp4 -bindir $ocamlfind__bin -sitelib $ocamlfind__lib -mandir $ocamlfind__man -config $ocamlfind__lib/findlib.conf -no-custom && make all && make opt && make install && make clean"
+    "esy": {
+        "build": [
+          "./configure -no-camlp4 -bindir $ocamlfind__bin -sitelib $ocamlfind__lib -mandir $ocamlfind__man -config $ocamlfind__lib/findlib.conf -no-custom",
+          "make all",
+          "make opt",
+          "make install",
+          "make clean"
+        ],
+        "exportedEnv": {
+            "ocamlfind_installed": {
+                "val": "true",
+                "scope": "global"
+            },
+            "ocamlfind_enable": {
+                "val": "enable",
+                "scope": "global"
+            },
+            "PATH": {
+                "val": "$ocamlfind__bin:$PATH",
+                "scope": "global"
+            }
+        }
     }
 }
