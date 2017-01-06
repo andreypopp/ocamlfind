@@ -12,7 +12,7 @@
           "make install",
           "make clean"
         ],
-        "buildOutOfSource": false,
+        "buildsInSource": true,
         "exportedEnv": {
             "ocamlfind_installed": {
                 "val": "true",
